@@ -25,7 +25,7 @@ class JobSeeder extends Seeder
             $i++;
         }
 
-        if (($handle = fopen ( public_path () . '/JOBLIST.csv', 'r' )) !== FALSE) {
+        if (($handle = fopen ( __DIR__ . '/../data/JOBLIST.csv', 'r' )) !== FALSE) {
             $once = true;
 
             while ( ($data = fgetcsv ( $handle, 0, ',' )) !== FALSE ) {

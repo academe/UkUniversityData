@@ -12,7 +12,7 @@ class UniversitySeeder extends Seeder
      */
     public function run()
     {
-        if (($handle = fopen ( public_path () . '/learning-providers-plus.csv', 'r' )) !== FALSE) {
+        if (($handle = fopen ( __DIR__ . '/../data/learning-providers-plus.csv', 'r' )) !== FALSE) {
             $once = true;
             
             while ( ($data = fgetcsv ( $handle, 0, ',' )) !== FALSE ) {

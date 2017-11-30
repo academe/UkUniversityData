@@ -15,7 +15,7 @@ class InstitutionSeeder extends Seeder
         $errors = 0;
         $errors_array = array();
 
-        if (($handle = fopen ( public_path () . '/INSTITUTION.csv', 'r' )) !== FALSE) {
+        if (($handle = fopen ( __DIR__ . '/../data/INSTITUTION.csv', 'r' )) !== FALSE) {
             while ( ($data = fgetcsv ( $handle, 1000, ',' )) !== FALSE ) {
                 if($data[0] == $data[1]){
                     try{

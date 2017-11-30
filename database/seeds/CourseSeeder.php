@@ -14,7 +14,7 @@ class CourseSeeder extends Seeder
     {
         $duplications = 0;
 
-        if (($handle = fopen ( public_path () . '/KISCOURSE.csv', 'r' )) !== FALSE) {
+        if (($handle = fopen ( __DIR__ . '/../data/KISCOURSE.csv', 'r' )) !== FALSE) {
             $once = true;
 
             while ( ($data = fgetcsv ( $handle, 0, ',' )) !== FALSE ) {
